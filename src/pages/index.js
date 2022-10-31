@@ -11,7 +11,7 @@ export default function Home() {
         <Function>Frontend Developer</Function>
         <Intro>Estudante no curso técnico em informática pelo IFBA - Campus Barreias, 
           tenho experiência em desenvolvimento Web
-          (React, JS e outros).
+          (HTML, CSS, JS, React, TYPESCRIPT).
         </Intro>
         <Link href="projects">
           <LinkProjects>PROJETOS <FaArrowRight /></LinkProjects>
