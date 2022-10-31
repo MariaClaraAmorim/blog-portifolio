@@ -9,9 +9,9 @@ export default function Home() {
       <Infos>
         <Name>Olá, sou Maria Clara Amorim</Name>
         <Function>Frontend Developer</Function>
-        <Intro>Estudante no curso técnico em informática pelo IFBA - Campus Barreias, 
+        <Intro>Estudante no curso técnico em informática pelo IFBA - Campus Barreiras, 
           tenho experiência em desenvolvimento Web
-          (HTML, CSS, JS, React, TYPESCRIPT).
+          (HTML, CSS, JS, React, TYPESCRIPT e outros).
         </Intro>
         <Link href="projects">
           <LinkProjects>PROJETOS <FaArrowRight /></LinkProjects>
