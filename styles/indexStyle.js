@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
   height: calc(100vh - 100px);
 `;
 
@@ -15,13 +16,12 @@ export const Content = styled.div`
   align-items: center;
   padding: 20px;
 
-  @media (max-width: 600px) {
-    padding: 5px;
-  }
-  
   @media (max-width: 760px) {
     flex-direction: column-reverse;
     justify-content: space-around;
+  }
+  @media (max-width: 600px) {
+    padding: 5px;
   }
 `;
 
@@ -79,20 +79,19 @@ export const Logo = styled.div`
 
   img {
     width: 25rem;
-    height: 25rem;
   }
 
   @media (max-width: 760px) {
     width: 90%;
+    margin-top: 5rem;
   }
 
-  @media (max-width: 600px) {
-
+  @media (max-width: 450px) {
     img {
       width: 18rem;
-      height: 18rem;
+      height: 13rem;
     }
   }
 `;
 
-export const Img = styled.img``
+export const Img = styled.img``;

@@ -21,9 +21,9 @@ export default function Header() {
           <Title>
          Maria Clara Amorim
           </Title>
-          <SubTitle>
+          {/* <SubTitle>
             Portfolio Pessoal
-          </SubTitle>
+          </SubTitle> */}
         </ContentTitle>
         <Menu>
           <FaBars onClick={showSiderbar} />
@@ -36,9 +36,9 @@ export default function Header() {
           <Link href="projects">
             <Ancora className={activeLink('projects')} onClick={showSiderbar}>Projetos</Ancora>
           </Link>
-          <Link href="contact">
+          {/* <Link href="contact">
             <Ancora className={activeLink('contact')} onClick={showSiderbar}>Contato</Ancora>
-          </Link>
+          </Link> */}
         </NavLinks>
       </Content>
     </Container>

@@ -17,7 +17,11 @@ export const Content = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 30px;
+  font-size: 2rem;
+
+  @media (max-width: 460px) {
+    font-size: 1rem;
+  }
 `;
 
 export const NavLinks = styled.nav`

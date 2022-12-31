@@ -27,12 +27,22 @@ export const Ul = styled.ul`
   &::-webkit-scrollbar {
     width: 12px;
     border-radius: 10px;
-    background-color: whitesmoke; 
+    background-color: whitesmoke;
   }
 
   &::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    background-color: darkgray; 
+    background-color: darkgray;
+  }
+`;
+
+export const Box = styled.div`
+  display: flex;
+  gap: 1rem;
+
+  @media (max-width: 425px) {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 `;
 
@@ -48,7 +58,7 @@ export const Li = styled.li`
   padding: 10px;
 
   @media (max-width: 760px) {
-   font-size: 13px;
+    font-size: 13px;
   }
 `;
 
@@ -57,3 +67,14 @@ export const TitleProject = styled.strong``;
 export const Url = styled.span``;
 
 export const Created_at = styled.span``;
+
+export const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  gap: 0.4rem;
+`;
+
+export const CapaProject = styled.div``;
+
+export const Img = styled.img``;
