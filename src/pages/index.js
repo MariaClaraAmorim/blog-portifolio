@@ -1,16 +1,11 @@
+import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import {
   Container,
-  Content,
-  Infos,
-  Name,
-  Function,
-  Intro,
+  Content, Function, Img, Infos, Intro,
   LinkProjects,
-  Logo,
-  Img,
+  Logo, Name
 } from "../../styles/indexStyle";
-import Link from "next/link";
 import Contact from "./contact";
 
 export default function Home() {
