@@ -1,15 +1,14 @@
-import React from 'react'
-import { Item, Icon, Text } from './style'
+import React from "react";
+
+import css from "./styles.module.css";
 
 export default function ItemContact({ IconFa, LinkContact }) {
   return (
-    <Item>
-      <Icon>
+    <div className={css.item}>
+      <div>
         <IconFa />
-      </Icon>
-      <Text>
-        {LinkContact}
-      </Text>
-    </Item>
-  )
+      </div>
+      <div className={css.text}>{LinkContact}</div>
+    </div>
+  );
 }

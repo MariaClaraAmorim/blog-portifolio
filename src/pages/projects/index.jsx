@@ -1,18 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import {
-  Container,
-  Content,
-  Ul,
-  Box,
-  Li,
-  TitleProject,
-  Url,
-  Created_at,
-  CapaProject,
-  Img,
-  Description
-} from "./style";
+
+import css from "./styles.module.css";
 
 export default function Projects() {
   const [itemsApi, setItemsApi] = useState([]);
@@ -38,31 +27,33 @@ export default function Projects() {
   }, []);
 
   return (
-    <Container>
-      <Content>
-        <Ul>
+    <div className={css.container}>
+      <div className={css.content}>
+        <ul className={css.ul}>
           {itemsApi.map((item) => (
-            <Li key={item.id}>
-              <Box>
-                <CapaProject>
-                  <Img src="https://via.placeholder.com/150" alt="logo" />
-                </CapaProject>
+            <li className={css.li} key={item.id}>
+              <div className={css.box}>
+                <div className={css.capaProject}>
+                  <img  src="https://via.placeholder.com/150" alt="logo" />
+                </div>
 
-                <Description>
-                  <TitleProject>{item.name.toUpperCase()}</TitleProject>
-                  <Url>URL: {item.url}</Url>
-                  <Created_at>
+                <div className={css.description}>
+                  <div className={css.titleProject}>
+                    {item.name.toUpperCase()}
+                  </div>
+                  <div className={css.url}>URL: {item.url}</div>
+                  <div className={css.created_at}>
                     Data Criação:{" "}
                     {Intl.DateTimeFormat("pt-BR").format(
                       new Date(item.created_at)
                     )}
-                  </Created_at>
-                </Description>
-              </Box>
-            </Li>
+                  </div>
+                </div>
+              </div>
+            </li>
           ))}
-        </Ul>
-      </Content>
-    </Container>
+        </ul>
+      </div>
+    </div>
   );
 }

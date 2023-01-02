@@ -1,46 +1,45 @@
-import React, { useState } from 'react'
-import { Container, Title, NavLinks, Ancora, Content, Menu, CloseSidebar, ContentTitle, SubTitle } from './style'
-import { FaBars, FaTimes } from 'react-icons/fa'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+import React, { useState } from "react";
+
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { FaBars, FaTimes } from "react-icons/fa";
+import css from "./styles.module.css";
 
 export default function Header() {
-  const [sidebar, setSidebar] = useState(false)
-  const { asPath } = useRouter()
+  const [sidebar, setSidebar] = useState(false);
+  const { asPath } = useRouter();
 
-  const showSiderbar = () => setSidebar(!sidebar)
+  const showSiderbar = () => setSidebar(!sidebar);
 
   function activeLink(path) {
-    return asPath === `/${path}` ? 'active' : ''
+    return asPath === `/${path}` ? "active" : "";
   }
 
   return (
-    <Container>
-      <Content>
-        <ContentTitle>
-          <Title>
-         Maria Clara Amorim
-          </Title>
-          {/* <SubTitle>
-            Portfolio Pessoal
-          </SubTitle> */}
-        </ContentTitle>
-        <Menu>
+    <div className={css.container}>
+      <div className={css.content}>
+        <div className={css.contentTitle}>
+          <h1 className={css.title}>Maria Clara Amorim</h1>
+        </div>
+        <div className={css.menu}>
           <FaBars onClick={showSiderbar} />
-        </Menu>
-        <NavLinks sidebar={sidebar}>
-          <CloseSidebar onClick={showSiderbar}><FaTimes /></CloseSidebar>
+        </div>
+        <div className={css.navLinks} sidebar={sidebar}>
+          <div className={css.closeSidebar} onClick={showSiderbar}>
+            <FaTimes />
+          </div>
           <Link href="/">
-            <Ancora className={activeLink('')} onClick={showSiderbar}>Home</Ancora>
+            <div className={activeLink("") + "" + css.ancora}   onClick={showSiderbar}>
+              Home
+            </div>
           </Link>
           <Link href="projects">
-            <Ancora className={activeLink('projects')} onClick={showSiderbar}>Projetos</Ancora>
+            <div className={activeLink("projects") + "" + css.ancora}  onClick={showSiderbar}>
+              Projetos
+            </div>
           </Link>
-          {/* <Link href="contact">
-            <Ancora className={activeLink('contact')} onClick={showSiderbar}>Contato</Ancora>
-          </Link> */}
-        </NavLinks>
-      </Content>
-    </Container>
-  )
+        </div>
+      </div>
+    </div>
+  );
 }
